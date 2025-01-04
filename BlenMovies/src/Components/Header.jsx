@@ -24,15 +24,15 @@ function Header() {
          icon:HiTv}
     ]
   return (
-    <div className="flex gap-8 items-center ">
-        <div>
-        <img src={logo} alt="logo" className="lg:w-[80px] md:w-[70px] object-cover" />
-        {
-            menu.map((item)=>(
+    <div className="flex items-center gap-8 p-4 justify-between">
+        <div className="flex">
+          <img src={logo} alt="logo" className="lg:w-[80px] md:w-[70px] object-cover" />
+        {menu.map((item)=>(
                 <HeaderItem key={item.name} name = {item.name} Icon={item.icon} />
             ))}
-    </div>
-    <img src={userpfp} alt="userprofilepic" srcset="" />
+        </div>
+          <img src={userpfp} className="w-[40px] rounded-full"alt="userprofilepic" />
+
     </div>
   )
 }
