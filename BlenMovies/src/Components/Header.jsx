@@ -24,12 +24,26 @@ function Header() {
          icon:HiTv}
     ]
   return (
-    <div className="flex items-center gap-8 p-4 justify-between">
+    <div className="flex items-center  p-4 justify-between">
         <div className="flex">
-          <img src={logo} alt="logo" className="lg:w-[80px] md:w-[70px] object-cover" />
+          <img src={logo} alt="logo" className="w-[40px]  object-cover" />
+        <div className="hidden md:flex gap-8 ">
         {menu.map((item)=>(
                 <HeaderItem key={item.name} name = {item.name} Icon={item.icon} />
             ))}
+            </div>
+            <div className="flex md:hidden gap-8">
+                {menu.map((item, index)=>index<3&&(
+                <HeaderItem key={''} name = {''} Icon={item.icon} />))}
+              <div className="md:hidden ">
+              <HeaderItem name='' Icon={HiDotsVertical} />
+              <div className="absolute mt-3 border-[1px] p-2">
+              {menu.map((item, index)=>index>2&&(
+                <HeaderItem key={item.name} name = {item.name} Icon={item.icon} />
+            ))}
+            </div>
+            </div>
+            </div>
         </div>
           <img src={userpfp} className="w-[40px] rounded-full"alt="userprofilepic" />
 
