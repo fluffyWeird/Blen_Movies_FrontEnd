@@ -1,58 +1,75 @@
 import React, { useState } from 'react'
-import logo from '../assets/Img/logo.png'
-import userpfp from '../assets/Img/profilepic.png'
-import HeaderItem from './HeaderItem'
-import {
-    HiHome,
-    HiMagnifyingGlass,
-    HiStar, 
-    HiPlayCircle, 
-    HiTv,
-} from 'react-icons/hi2'
-import {HiPlus,HiDotsVertical} from 'react-icons/hi'
-function Header() {
-  const [toggle, setToggle] = useState(false)
-
-    const menu = [
-        {name:'HOME',
-         icon:HiHome},
-        {name:'SEARCH',
-         icon:HiMagnifyingGlass},
-         {name:'WATCH LIST',
-         icon:HiPlus},
-         {name:'MOVIES',
-         icon:HiPlayCircle},
-         {name:'SERIES',
-         icon:HiTv}
-    ]
+import iconai from '../assets/iconai.png'
+import { Link, useNavigate, useNavigation } from 'react-router-dom'
+import MobileHeader from './MobileHeader'
+export default function Header({onopen}) {
+  const [input,setInput]=useState(null)
+  const [open,setOpen]=useState(false)
+  const navigation=useNavigate()
+  const handleKeyDown = (event) => {
+    console.log('Key pressed:', event.key)
+    console.log('input',input)
+    if (event.key === 'Enter' && input) {
+      console.log("am in")
+    navigation('/Search.../'+input)
+    }
+  };
   return (
-    <div className="flex items-center p-4 justify-between bg-black w-full fixed top-0 z-50">
-        <div className="flex relative">
-          <img src={logo} alt="logo" className="w-[40px] object-cover" />
-        <div className="hidden md:flex gap-8">
-        {menu.map((item)=>(
-                <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
-            ))}
-            </div>
-           <div className="flex md:hidden gap-8">
-                {menu.map((item, index)=>index<3&&(
-                <HeaderItem key={''} name={''} Icon={item.icon} />))}
-              <div className="md:hidden" onClick={()=>setToggle(!toggle)}>
-              <HeaderItem name='' Icon={HiDotsVertical} />
-              {toggle? <div className="absolute mt-3 border-[1px] px-2 py-3 rounded-md bg-black border-gray-100 p-2">
-              {menu.map((item, index)=>index>2&&(
-                <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
-            ))}
-            </div>
-                :null}
-            </div>
-            </div>
-        
-        </div>
-          <img src={userpfp} className="w-[40px] rounded-full"alt="userprofilepic" />
-
+    <>
+    <MobileHeader onclose={()=>setOpen(false)} visible={open}/>
+    <div className='flex flex-row z-[20] justify-between  mx-2 sm:mx-[50px] items-center my-4'>
+     
+    <Link to={'/'} className='flex hover:cursor-pointer  flex-row item-center justify-center mt-2'>
+      <p className='text-white text-2xl font-bold'>Blen</p>
+      <div className=' px-2 h-[32px] mx-2 flex  justify-center items-center     bg-yellow-500'>
+        <p className='text-white font-bold'>Movies</p>
+      </div>
+    </Link>
+    <div onClick={onopen} className='text-white sm:hidden font-bold  hover:cursor-pointer h-[35px] hover:bg-opacity-[0.5] hover:bg-gray-700 flex  justify-center items-center  border-[0.5px] p-[5px] rounded-md border-gray-700 mx-2  flex flex-row'>
+      <img src={iconai} alt="" className='w-[20px] h-[20px] rounded-full' />
+      <p className='text-white  mx-1'>Search  Gemini</p>
+      </div>
+    <div onClick={()=>setOpen(true)} className='sm:hidden text-white h-[35px]'>
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="h-8 w-8">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+  </svg>
     </div>
+   
+    <div className=' hidden sm:flex flex-row items-center justify-center'>
+     
+    <div className='text-white font-bold  hover:cursor-pointer h-[35px] hover:bg-opacity-[0.5] hover:bg-gray-700 flex  justify-center items-center  border-[0.5px] p-[5px] rounded-md border-gray-700 mx-2  flex flex-row'>
+      <input onKeyDown={handleKeyDown} onChange={(e)=>setInput(e.target.value)} value={input} type="text" placeholder="Search" className='bg-transparent pl-[6px] text-white outline-none w-[300px] ' />
+      <svg  onClick={()=>{
+        if(input){
+          navigation('/search/'+input)
+        }
+      }} class="h-5 w-5 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" strokeLinejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+  </svg>
+  
+      </div>
+      <Link to='/' className='text-white font-bold mx-5 hover:cursor-pointer hover:text-yellow-500 '>Home</Link>
+      <Link to='/Movies' className='text-white font-bold mx-5 hover:cursor-pointer hover:text-yellow-500 '>Movies</Link>
+      {/* <Link to='/trending' className='text-white font-bold mx-5 hover:cursor-pointer hover:text-yellow-500 '>Trending</Link> */}
+      <Link to='/Tvseries' className='text-white font-bold mx-5 hover:cursor-pointer  hover:text-yellow-500'>Tv Series</Link>
+      
+      <div onClick={onopen} className='text-white font-bold  hover:cursor-pointer h-[35px] hover:bg-opacity-[0.5] hover:bg-gray-700 flex  justify-center items-center  border-[0.5px] p-[5px] rounded-md border-gray-700 mx-2  flex flex-row'>
+      <img src={iconai} alt="" className='w-[20px] h-[20px] rounded-full' />
+      <p className='text-white  mx-1'>Search with Gemini</p>
+      </div>
+  
+      
+    </div>
+  </div>
+  </>
   )
 }
-
-export default Header
