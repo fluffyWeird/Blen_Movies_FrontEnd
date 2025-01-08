@@ -89,7 +89,7 @@ We welcome contributions to improve this project! Here's how you can contribute:
 5. Open a pull request.
 
 ---
-##  Screenshot
+## 📸 Screenshot
 ![image alt](https://github.com/fluffyWeird/Blen_Movies_FrontEnd/blob/main/BlenMoviesBackEnd/Screenshot%202025-01-08%20161445.png?raw=true)
 
 ![image alt](https://github.com/fluffyWeird/Blen_Movies_FrontEnd/blob/main/BlenMoviesBackEnd/Screenshot%202025-01-08%20161427.png?raw=true)
