@@ -6,6 +6,9 @@ Welcome to the **Blen_Movies_FrontEnd** repository! This project is a dynamic an
 This is page is for educational purpose only, we agree people should earn for their hard work and holywood movies should always be in the theatre but we couldn't find access to movies and viewing so we build this.
 
 ---
+## Live Demo
+Official website :https://blen-movies.vercel.app/
+---
 
 ## 📌 Project Overview
 
