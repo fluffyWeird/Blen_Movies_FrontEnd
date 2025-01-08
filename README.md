@@ -18,10 +18,10 @@ Official Website : https://blen-movies.vercel.app/
 
 The **Blen_Movies_FrontEnd** is designed to:
 
-- Display movie information such as ratings, reviews, genres, and trailers.
+- Display movie information such as ratings, reviews, and trailers.
 - Provide a responsive and intuitive UI for exploring movies.
 - Integrate with APIs for up-to-date movie data.
-- Allow users to search and filter movies by genre, release date, and more.
+- Allow users to search and filter movies.
 
 ---
 
