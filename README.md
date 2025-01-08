@@ -1,7 +1,7 @@
 
-# Blen_Movies_FrontEnd 🎬
+# Blen_Movies 🎬
 
-Welcome to the **Blen_Movies_FrontEnd** repository! This project is a dynamic and user-friendly frontend application for discovering, browsing, and managing movie-related content. Built with cutting-edge web technologies, it provides a seamless experience for movie enthusiasts. 
+Welcome to the **Blen_Movies**! This project is a dynamic and user-friendly frontend application for discovering, browsing, and managing movie-related content. Built with cutting-edge web technologies, it provides a seamless experience for movie enthusiasts. 
 
 This is page is for educational purpose only, we agree people should earn for their hard work and holywood movies should always be in the theatre but we couldn't find access to movies and viewing so we build this. 
 
