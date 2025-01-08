@@ -100,7 +100,7 @@ We welcome contributions to improve this project! Here's how you can contribute:
 
 This project is proudly developed by:
 
-- **Elroe Ensermu** : https://github.com/Ella-Ensermu
 - **Eyuel Kebede** : https://github.com/fluffyWeird
+- **Elroe Ensermu** : https://github.com/Ella-Ensermu
 
 Feel free to suggest changes or let me know if you want additional sections!
