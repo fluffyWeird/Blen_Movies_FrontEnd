@@ -90,8 +90,8 @@ We welcome contributions to improve this project! Here's how you can contribute:
 
 ---
 ##  Screenshot
-https://github.com/fluffyWeird/Blen_Movies_FrontEnd/blob/main/BlenMoviesBackEnd/Screenshot%202025-01-08%20161427.png?raw=true
-https://github.com/fluffyWeird/Blen_Movies_FrontEnd/blob/main/BlenMoviesBackEnd/Screenshot%202025-01-08%20161445.png?raw=true
+![image alt](https://github.com/fluffyWeird/Blen_Movies_FrontEnd/blob/main/BlenMoviesBackEnd/Screenshot%202025-01-08%20161427.png?raw=true)
+![image alt](https://github.com/fluffyWeird/Blen_Movies_FrontEnd/blob/main/BlenMoviesBackEnd/Screenshot%202025-01-08%20161445.png?raw=true)
 ---
 ## 👥 Author's
 
