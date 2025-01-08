@@ -10,6 +10,8 @@ This is page is for educational purpose only, we agree people should earn for th
 ## Live Demo
 Official Website : https://blen-movies.vercel.app/
 
+![image alt](https://github.com/fluffyWeird/Blen_Movies_FrontEnd/blob/main/BlenMoviesBackEnd/Screenshot%202025-01-08%20162922.png?raw=true)
+
 ---
 
 ## 📌 Project Overview
