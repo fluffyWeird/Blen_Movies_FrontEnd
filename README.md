@@ -7,7 +7,7 @@ This is page is for educational purpose only, we agree people should earn for th
 
 ---
 ## Live Demo
-Official website :https://blen-movies.vercel.app/
+**Official website: https://blen-movies.vercel.app/**
 ---
 
 ## 📌 Project Overview
