@@ -10,7 +10,7 @@ export default function UseFetchSearchAi(promt) {
 
 const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
-    systemInstruction: "Provide a list of movies and TV series in JSON format without ```json, including the movie/series title, type (movie or tv), and year of release. Use the following structure: Do not include any additional text or explanations. or answer I Don't Know This movie",
+    systemInstruction: "Provide a list of movies and TV series in JSON format without ```json or the other ``` or anything just simply the json file, including the movie/series title, type (movie or tv), and year of release. Use the following structure: Do not include any additional text or explanations. or answer I Don't Know This movie",
 });
 
 const generationConfig = {
@@ -31,10 +31,9 @@ const generationConfig = {
       generationConfig,
   });
   const jsonResult1 = await result.response.text()
-  const jsonResult =jsonResult1.replaceAll('```', '')
-
+  const jsonResult =jsonResult1.replace(/```json|```/g, '')
   try {
-    console.log("jsonResult",jsonResult)
+    console.log(jsonResult)
     // Parse the JSON string
     return  JSON.parse(jsonResult);
     

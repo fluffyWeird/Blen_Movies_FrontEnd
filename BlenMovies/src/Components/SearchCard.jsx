@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import UseSearchEachCourse from '../hooks/UseSearchEachCourse'
 
-export default function SearchCards({ Title,series,year}) {
-  const {data,isLoading}=UseSearchEachCourse(Title,year)
+export default function SearchCards({ Title, series, year}) {
+  const {data, isLoading} = UseSearchEachCourse(Title, year)
   if(isLoading){
 return (  <div className='h-[300px] shrink-0  group relative mx-2 my-2 flex items-center justify-center shadow-2xl shadow-black z-[10] overflow-hidden w-[200px] rounded-md cursor-pointer bg-gradient-to-r  from-zinc-800 to-zinc-950 animate-pulse'>
   <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">

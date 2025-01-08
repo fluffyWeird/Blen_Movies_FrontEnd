@@ -9,7 +9,7 @@ export default function SearchPopup({ onclose }) {
   const [input, setInput] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
-
+  //
   const { data, refetch, isRefetching, isLoading,isError } = UseFetchSearchAi(input);
   
 
